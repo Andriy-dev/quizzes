@@ -1,0 +1,8 @@
+List heap use cases
+===================
+
+* To quickly find the smallest and largest element from a collection of items or array.
+* In the implementation of the Priority queue in graph algorithms like Dijkstra's algorithm (shortest path), Prim's algorithm (minimum spanning tree) and Huffman encoding (data compression).
+* In order to overcome the Worst-Case Complexity of Quick Sort algorithm from O(n^2) to O( nlog(n) ) in Heap Sort.
+* For finding the order in statistics.
+* Systems concerned with security and embedded system such as Linux Kernel uses+ Heap Sort because of the O( nlog(n) ).
