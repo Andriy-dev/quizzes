@@ -11,6 +11,8 @@ Operations on Heaps
 ===================
 
 * Heapify → Process to rearrange the heap in order to maintain heap-property.
+ * Up-Heapify
+ * Down-Heapify
 * Find-max (or Find-min) → find a maximum item of a max-heap, or a minimum item of a min-heap, respectively.
 * Insertion → Add a new item in the heap.
 * Deletion → Delete an item from the heap.
