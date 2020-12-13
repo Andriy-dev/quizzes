@@ -1,0 +1,95 @@
+# Yaml 
+
+YAML is a data serialization languages. We can use YAML do define key-value pairs. Yaml is very similar to JSON - JavaScrip Object Notation. Defined in https://yaml.org/spec/1.2/spec.html
+
+Serialization languages:
+YAML
+JSON
+XML
+
+YAML is designed to be human readable. Two extensions is acceptable .yml / .yaml. 
+
+Both JSON and YAML aim to be human readable data interchange formats. However, JSON and YAML have different priorities. JSON’s foremost design goal is simplicity and universality. Thus, JSON is trivial to generate and parse, at the cost of reduced human readability. It also uses a lowest common denominator information model, ensuring any JSON data can be easily processed by every modern programming environment.
+
+In contrast, YAML’s foremost design goals are human readability and support for serializing arbitrary native data structures. Thus, YAML allows for extremely readable files, but is more complex to generate and parse. In addition, YAML ventures beyond the lowest common denominator data types, requiring more complex processing when crossing between different programming environments.
+
+YAML can therefore be viewed as a natural superset of JSON, offering improved human readability and a more complete information model. This is also the case in practice; every JSON file is also a valid YAML file. This makes it easy to migrate from JSON to YAML if/when the additional features are required.
+
+Sequence of Scalars:
+
+- "Hardik Parekh"
+- "Denada Kapaj"
+- "Aris Papathanasiou"
+
+YAML allow us to define variables, for example ( Mapping Scalar to Scalar)
+
+name: "Andrew"
+department: "Engineering"
+
+YAML allows us to define objects: 
+
+person:
+    name: "andrew"
+    department: "Engineering"
+
+ Scope is defined with identattion. 
+
+ In addition to variables we can define lists: (Mapping Scalar to Sequence)
+ 
+First type of list definition
+
+person:
+   name: "andrew"
+   department: "Engineering"
+   designs_delivered:
+    - "K8s v1"
+    - "K8s v2"
+    - "K8s v3"
+    - "Inra&Prime Rack LLD"
+
+Second type of list definition
+
+person:
+   name: "andrew"
+   department: "Engineering"
+   designs_delivered:
+    - "K8s v1"
+    - "K8s v2"
+    - "K8s v3"
+    - "Inra&Prime Rack LLD"
+   team: ["Aris", "Joeri", "Aman" ]
+
+Complex lists are supported:
+
+person:
+   name: "andrew"
+   department: "Engineering"
+   designs_delivered:
+    - "K8s v1"
+    - "K8s v2"
+    - "K8s v3"
+    - "Inra&Prime Rack LLD"
+  team: ["Aris", "Joeri", "Aman" ]        
+  peers:
+    - name: "Hardik"
+      department: "Operations"
+      designs_implemented: "5000"
+    - { name: "Denada", department: "Operatiosn", last_maintenance: "MacSec" }
+    -
+      name: "Omkar"
+      departnemt: "Operations"
+
+Above doing the same thing - storing the information. 
+
+We can encode a lot of information (> - single line)
+
+openshift: >
+    OpenShift is a family of containerization software products developed by Red Hat. Its flagship product is the OpenShift Container Platform — an on-premises platform as a service built around Docker containers orchestrated and managed by Kubernetes on a foundation of Red Hat Enterprise Linux.
+
+With formatting ( | )
+
+kubernetes: |
+    Kubernetes is amazing !
+    Kubernetes is an open-source container-orchestration system for automating computer application deployment, scaling, and management. It was originally designed by Google and is now maintained by the Cloud Native Computing Foundation.
+    Learn Kubernetes today !
+
