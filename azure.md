@@ -304,6 +304,27 @@ Azure Service Matrix
   * Application Gateway
   * Load Balancer
 
+Azure Delivery methods comparison
+=================================
+
+Azure Load Balancer|Azure Application Gateway|Azure Traffic Manager|Azure Front Door
+-------------------|-------------------------|---------------------|----------------
+Works on L4 OSI    | Works on L7 OSI         | DNS bsed LB (only at domain level) | Offers L7 capabilities
+Health probes TCP/HTTP | Health probes as HTTP/HTTPS | HTTP/HTTPS/TCP | synthetic HTTP/HTTPS in form of GET/HEAD
+Standart/Basic SKU|Standart/Basic SKU|NA|NA
+Recently becomes Global LB | Regional LB | Global | Global
+Azure VM | Any IP Address | Public DNS CNAME | Various(App service,cloud service, storage, App GW, API Mgmt, Public IP)
+TCP&UDP|HTTP,HTTPS,HTTP/2 & WebSocket|DNS Resolution|HTTP,HTTPS, HTTP/2
+Sticky sessions supported|Sticky sessions supported|Sticky sessions supported|Sticky sessions supported
+NSG provide traffic control|NSG|Geo-traffic replication|
+NA|WAF|NA|WAF
+
+
+Difference between HTTP and HTTP/2
+==================================
+HTTP1.1 keep all requests and responses in text format, HTTP/2 using binary encoding
+
+
 Azure Load Balancer
 ===================
 * Solve problem of high-availablity
@@ -453,3 +474,70 @@ Reliability
   * Deploy across multiple AZ
   * Plan for component level failure
   * Plan for dependancy failure
+
+Whats happenend after user types url in the browser ?
+=====================================================
+1. User types a URL in the Browser
+2. A DNS requiest is made
+3. A browser received an IP address and needs to contact it
+4. CDN copies this data in strategic geolocations around the word
+5. Browser will call for the Edge Server within CDN nework nearer to the end-user
+6. CDN always return the best possible IP address
+7. If content cant be found in the Edge Server cache , the edge server sends request to the Origing Server to retrieve this information
+8. Nature of dynamic content requires repeated back and forth calls to the Origin Server
+   1. Same request provide different results - personalized content for users
+   2. It rely more on teh contnet provider origin
+9. DSA, comes into play - optimize latency and varying round-trip time of the desired content
+10. DSA uses advanced DNS mapping, better TCP algorithms
+11. On-the-fly compression
+12. Will identify cacheable content form dynamic content
+
+
+# Azure Security Products
+## Users and Devices
+1. Azure Active Directory
+   The Azure Active Directory (Azure AD) its an enterprise identity service provides singel sign-on and MFA 
+2. Azure IOT Central
+   Secure IOT Provider
+3. Azure Sphere
+   Azure Sphere is a secured, high-level applicatoin platform with built-in communication and security features for internet-connected devices
+4. Microsoft Authenticator
+   App that provide additional layer of security on top of the fingerprint or PIN
+5. Microsoft Intune
+   Mobile Device Management and Mobile Application Managment. 
+6. Windows 10
+   Flagship operation system and released as a part of Windows NT. Seamless experience across multiple deivces
+## Data and Apps
+1. Azure Dedicated HSM Gateway ( Hardware Security Module )
+   Maintain full administrative and cryptographic contol of your HSM
+   Validated for FIPS 140-2 Level 3 and eIDAS Common Criteria EAL4+
+   Migrate HSM applications to Azure with minimal changes and improved latency
+2. Control and secure data and document within organization within and outside of the company.
+   Classification, protection, visibility, control, secure collaboration 
+3. Azure Key Vault
+   Azure Key Valut is a cloud service that provides a secure store for secrets. ( Keys, passwords, certificates, etc)
+4. Microsoft Cloud App Security
+   Posture validateion, Monitoring, Compliance, Protect against cyberthreats and anomalies
+## Threat protection
+1. Azure Advance Threat protection - Azure ATP = Defender for Identity
+   Cloud-based security solution that leverages on-prem AD signals to identify, detect and investigate advanced threats, compromised identities and insider actions
+   * Prevent
+   * Detect
+   * Investigate
+   * Respondd
+2. Azure Sentinel
+   Security Information and Event Management
+   * **Collect** Data across Users, Devices, Applicatoins and Infrastructure in multiple clouds
+   * **Detect** new(!) threats and minimize false positives
+   * **Investigate** threats with AI and hunt suspicious activities at scale
+   * **Respond** to incidents rapidly
+3. Microsoft Defender for endpoint
+   Host-based protection
+4. Office 365 Advanced Threat Protection
+5. Microsoft Secure Score
+   Security Posture assecment across M365 workloads
+## Infrastructure
+1. Azure Application Gateway
+2. Azure DDoS Protection
+3. Azure Security Center
+4. Azure VPN Gateway 
