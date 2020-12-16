@@ -538,6 +538,8 @@ Whats happenend after user types url in the browser ?
    >Security Posture assecment across M365 workloads
 ## Infrastructure
 1. Azure Application Gateway
+>Azure Application Gateway is a web traffic load balancer that enables you to manage traffic to your web applications
 2. Azure DDoS Protection
 3. Azure Security Center
+>Azure Security Center is a unified infrastructure security management system that strengthens the security posture of your data centers, and provides advanced threat protection across your hybrid workloads in the cloud - whether they're in Azure or not - as well as on premises.
 4. Azure VPN Gateway 
