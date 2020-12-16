@@ -496,9 +496,9 @@ Whats happenend after user types url in the browser ?
 # Azure Security Products
 ## Users and Devices
 1. Azure Active Directory
-   The Azure Active Directory (Azure AD) its an enterprise identity service provides singel sign-on and MFA 
+   >The Azure Active Directory (Azure AD) its an enterprise identity service provides singel sign-on and MFA 
 2. Azure IOT Central
-   Secure IOT Provider
+   >Secure IOT Provider
 3. Azure Sphere
    Azure Sphere is a secured, high-level applicatoin platform with built-in communication and security features for internet-connected devices
 4. Microsoft Authenticator
