@@ -543,3 +543,54 @@ Whats happenend after user types url in the browser ?
 3. Azure Security Center
 >Azure Security Center is a unified infrastructure security management system that strengthens the security posture of your data centers, and provides advanced threat protection across your hybrid workloads in the cloud - whether they're in Azure or not - as well as on premises.
 4. Azure VPN Gateway 
+
+
+# Best Practices for Azure Security
+
+## For Sale in "bad neighborhood" on the internet
+
+* Attacker for hire
+* Ransomware kits
+* Compromised PCs/Devices
+* Spearphishing for hire
+* Stolen passwords
+* Denial of Service
+
+Peoples/Process/Technologies
+============================
+
+## Peoples
+1. Education on cloud journey
+2. Educate on cloud technology
+## Process: Clarify and Streamline security
+3. Assign Accountability, Clear ownership of decisions and actions
+4. Rapid incident responce, Update processes to cloud platform
+5. Posture Management; Assign ownership, Automate, and Simplify
+6. Passwordless/MFA; Strong authentication assurances
+7. Native Network Security & Firewall; Simplify protection of systems and data
+8. Native Threat Detection; Simplify Threat Detection and Response
+## Foundational Architecture
+9. Single Directory / Identity ; Simplifies monitoring & user experience
+10. Identity access (instead of keys) ; Avoid using key based access control
+11. Single strategy ; Align and integrate teams, processes
+
+User needs
+==========
+* Visibility
+   * Logs
+   * Alerts
+* Control
+   * Key Vault
+   * Secuting API access
+   * WAF
+   * DDOS protection
+   
+  https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/security/security-top-10
+   
+   
+
+
+
+
+
+
